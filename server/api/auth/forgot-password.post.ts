@@ -19,7 +19,7 @@ export default defineEventHandler(async (event) => {
 
   const token = generateToken({ userId: user.id }, '1h');
 
-  const resetLink = `http://localhost:3000/reset-password?token=${token}`;
+  const resetLink = `${process.env.BASE_URL}/auth/reset-password?token=${token}`;
   await sendPasswordResetEmail(user.email, resetLink);
 
   return { message: 'Password reset email sent successfully!' };
