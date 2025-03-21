@@ -1,7 +1,7 @@
 # Currency Buy
 
 Este projeto é uma aplicação web desenvolvida com **Nuxt 3**, focada em uma **simulação de compra de moedas**. 
-A aplicação permite o login de usuários por meio de **LinkedIn**, **Google** e **Facebook**, além de possibilitar o cadastro tradicional com credenciais (e-mail e senha), recuperação de senha e controle de perfil.
+A aplicação permite o login de usuários por meio de **Google** e **Facebook**, além de possibilitar o cadastro tradicional com credenciais (e-mail e senha), recuperação de senha e controle de perfil.
 Após o login o usuário é direcionado para a tela de **Comprar Moedas**, nela ele seleciona a moeda que quer comprar em um select e define a quantidade. O sistema aplica a taxa de Câmbio + Taxa de Serviço de 2% e calcula o total.
 Ele pode acionar mais de uma moeda por transação e elas vão sendo exibidas abaixo. Esse controle é feito com **Pinia**. Ele também pode excluir moedas da sua seleção antes de "Comprar".
 Em caso de sucesso da compra ele pode optar por ser direcionado para a tela de **Extrato de transações**, onde pode conferir todo seu histórico de compra.
@@ -24,7 +24,6 @@ Em caso de sucesso da compra ele pode optar por ser direcionado para a tela de *
 ### Integração com OAuth:
 - **Google APIs**: Autenticação via Google OAuth.
 - **Facebook Login**: Autenticação via Facebook OAuth.
-- **LinkedIn OAuth**: Autenticação via LinkedIn OAuth.
 
 ### Outros:
 - **Axios**: Biblioteca para fazer requisições HTTP.
@@ -32,7 +31,7 @@ Em caso de sucesso da compra ele pode optar por ser direcionado para a tela de *
 
 ## Funcionalidades
 
-- **Autenticação via Google, Facebook e LinkedIn**: Permite o login usando APIs OAuth de redes sociais.
+- **Autenticação via Google e Facebook**: Permite o login usando APIs OAuth de redes sociais.
 - **Cadastro com e-mail e senha**: Permite que o usuário se registre tradicionalmente, armazenando suas informações de forma segura no banco de dados.
 - **Recuperação de Senha**: Usuários podem solicitar a redefinição de senha através de um link enviado para o e-mail cadastrado.
 - **Persistência de Sessão**: O estado de autenticação é salvo e recuperado através do `pinia-plugin-persistedstate`.
@@ -56,9 +55,6 @@ Em caso de sucesso da compra ele pode optar por ser direcionado para a tela de *
     BASE_URL=<"http://localhost:3000">
     MAILERSEND_API_KEY=<EMAIL_VERIFICADO_MAILERSENDER>
     JWT_SECRET=<SUA_SECRET_KEY>
-    LINKEDIN_CLIENT_ID=<SEU_CLIENT_ID_LINKEDIN>
-    LINKEDIN_CLIENT_SECRET=<SEU_CLIENT_SECRET_LINKEDIN>
-    LINKEDIN_REDIRECT_URI=<SUA_REDIRECT_URI>
     GOOGLE_CLIENT_ID=<SEU_CLIENT_ID_GOOGLE>
     GOOGLE_CLIENT_SECRET=<SEU_CLIENT_SECRET_GOOGLE>
     GOOGLE_REDIRECT_URI=<SUA_REDIRECT_URI_GOOGLE>

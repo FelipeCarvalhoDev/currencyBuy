@@ -18,7 +18,7 @@
   @apply text-2xl font-bold pb-4;
 }
 .modal_body {
-  @apply py-8 border-b-2 border-t-2;
+  @apply py-8 border-b-2 border-t-2 text-center;
 }
 .modal_footer {
   @apply flex justify-around gap-8 pt-8;

@@ -5,10 +5,10 @@ export const headerNav = [
   },
   {
     title: 'Comprar moedas',
-    link: '/purchase'
+    link: '/comprar-moeda'
   },
   {
     title: 'Extrato de transações',
-    link: '/extract'
+    link: '/extrato'
   },
 ]

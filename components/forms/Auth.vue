@@ -9,7 +9,7 @@
     
     <ElementsFieldInput
       v-if="variant === 'REGISTER'"
-      label="Name" 
+      label="Nome" 
       name="name" 
       id="name" 
       v-model="name" 
@@ -32,7 +32,7 @@
     
     <ElementsFieldInput
       v-if="variant !== 'FORGOT'"
-      label="Password" 
+      label="Senha" 
       name="password" 
       id="password" 
       v-model="password" 
@@ -47,7 +47,7 @@
       class="text-right -mt-4 underline cursor-pointer" 
       @click="toggleForgotPassword"
     >
-      Forgot password?
+      Esqueceu a senha?
     </small>
 
     <ElementsFieldButton
@@ -55,7 +55,7 @@
       fullWidth
       type="submit"
     >
-      {{ variant === 'LOGIN' ? 'Sing In' : variant === 'REGISTER' ? 'Register' : 'Reset password' }}
+      {{ variant === 'LOGIN' ? 'Entrar' : variant === 'REGISTER' ? 'Cadastrar' : 'Recuperar senha' }}
     </ElementsFieldButton>
   
   </Form>
@@ -66,24 +66,23 @@
           <div class="w-full border-t border-gray-300"></div>
         </div>
         <div class="relative flex justify-center text-sm">
-          <span class="bg-gray-100 px-2 text-gray-500"> Or Continue with </span>
+          <span class="bg-gray-100 px-2 text-gray-500"> OU </span>
         </div>
       </div>
       <div class="mt-6 flex gap-2">
         <ElementsFieldSocialButton icon="logos:google-icon" name="Google" @click="authGoogle" />
         <ElementsFieldSocialButton icon="logos:facebook" name="Facebook" @click="authFacebook" />
-        <ElementsFieldSocialButton icon="logos:linkedin-icon" name="LinkedIn" @click="authLinkedIn" />
       </div>
     </div>
 
     <div class="flex flex-col lg:flex-row gap-2 justify-center items-center text-sm mt-6 px-2 text-gray-500 text-center">
       <div @click="toggleVariant">
         {{
-          variant === 'LOGIN' ? `Don't have an account?` : 'Already have an account?'
+          variant === 'LOGIN' ? `Ainda não tem conta?` : 'Já possui conta?'
         }}
       </div>
       <div @click="toggleVariant" class="underline cursor-pointer">
-        {{ variant === 'LOGIN' ? 'Create an account' : 'Login' }}
+        {{ variant === 'LOGIN' ? 'Criar uma conta' : 'Entrar' }}
       </div>
     </div>
   </div>
@@ -104,9 +103,6 @@ const authGoogle = () => {
 
 const authFacebook = () => {
   window.location.href = '/api/auth/login/facebook';
-};
-const authLinkedIn = () => {
-  window.location.href = '/api/auth/login/linkedin';
 };
 
 type VARIANT = 'LOGIN' | 'REGISTER' | 'FORGOT'

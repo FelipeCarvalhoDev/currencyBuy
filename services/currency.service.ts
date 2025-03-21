@@ -38,7 +38,7 @@ export const saveTransaction = async (items: any[]) => {
         title: response.title,
         message: response.message,
         redirect: {
-          link: '/extract',
+          link: '/extrato',
           btnText: 'Ir para Extrato'
         }
       })

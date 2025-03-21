@@ -25,11 +25,11 @@
           <ClientOnly>
             <li class="h-12 w-px bg-grayTheme"></li>
             <li v-if="userStore.name">
-              Hi, {{ userStore.name }}
+              Olá, {{ userStore.name }}
             </li>
             <li>
               <ElementsFieldButton :outlined="authStore.isLoggedIn" @click="onSubmit">
-                {{ !authStore.isLoggedIn ? 'Sing In/Regiser' : 'Logout' }}
+                {{ !authStore.isLoggedIn ? 'Entrar/Cadastrar' : 'Sair' }}
               </ElementsFieldButton>
             </li>          
           </ClientOnly>

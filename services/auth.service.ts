@@ -23,7 +23,7 @@ export const loginUser = async (data:object) => {
     .then(response => {
       authStore.setToken(response.token);
       userStore.setUser(response.user)
-      router.push("/purchase");
+      router.push("/comprar-moeda");
     })
     .catch(error => {      
       throw error

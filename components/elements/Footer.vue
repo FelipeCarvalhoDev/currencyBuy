@@ -12,7 +12,7 @@
       </div>
     </div>
     <div class="container mt-8 border-t border-offWhite pt-4">
-      <small class="block text-center">© 2024 Meu App. Todos os direitos reservados.</small>
+      <small class="block text-center">© 2024 Currency Buy. Todos os direitos reservados.</small>
     </div>
   </div>
 </template>

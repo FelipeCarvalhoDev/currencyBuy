@@ -25,7 +25,7 @@
               {{ modal.message.redirect.btnText }}
             </ElementsFieldButton>
             <ElementsFieldButton class="btn btn-outlined" :fullWidth="modal.message.redirect ? true : false" @click="closeModal()">
-              {{ modal.message.btnText || 'Close' }}
+              {{ modal.message.btnText || 'Fechar' }}
             </ElementsFieldButton>
           </div>
         </div>

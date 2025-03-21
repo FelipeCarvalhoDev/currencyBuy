@@ -14,9 +14,9 @@ export default defineNuxtRouteMiddleware(async (to, from) => {
     if (requiresAuth && !authStore.isLoggedIn) {
       modalStore.showModal({
         type: 'warning',
-        title: 'Warning',
-        message: 'You need to be logged in to access this page.',
-        btnText: 'Login'
+        title: 'Atenção',
+        message: 'Você precisa estar logado para acessar essa página.',
+        btnText: 'Entrar'
       })
       return navigateTo('/auth');
     }
@@ -25,7 +25,7 @@ export default defineNuxtRouteMiddleware(async (to, from) => {
       modalStore.showModal({
         type: 'warning',
         title: 'Warning',
-        message: 'You need to be an ADMIN to access this page.'
+        message: 'Você precisa ser um ADMIN para acessar essa página.'
       })
       return navigateTo(from); 
     }

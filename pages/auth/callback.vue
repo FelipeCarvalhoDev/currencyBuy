@@ -20,7 +20,7 @@ if (token && user) {
   try {
     authStore.setToken(token);
     userStore.setUser(user)
-    router.push('/logged');
+    router.push('/');
   } catch (error) {
     console.error('Erro de autenticação:', error);
   }
